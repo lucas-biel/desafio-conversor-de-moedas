@@ -10,7 +10,8 @@ public class Request {
 
     public ConvertedValue convertCurrency(String baseCurrency, String targetCurrency, String amount) throws IOException, InterruptedException {
 
-        String url = "https://v6.exchangerate-api.com/v6/ca35f5de65c7f42b17b261a5/latest/" + baseCurrency + "/" + targetCurrency + "/" + amount;
+        Config config = new Config();
+        String url = "https://v6.exchangerate-api.com/v6/" + config.getApiKey() + "/latest/" + baseCurrency + "/" + targetCurrency + "/" + amount;
 
         HttpClient client = HttpClient.newBuilder()
                 .build();
