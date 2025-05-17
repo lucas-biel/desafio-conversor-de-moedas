@@ -11,7 +11,7 @@ public class Request {
     public ConvertedValue convertCurrency(String baseCurrency, String targetCurrency, String amount) throws IOException, InterruptedException {
 
         Config config = new Config();
-        String url = "https://v6.exchangerate-api.com/v6/" + config.getApiKey() + "/latest/" + baseCurrency + "/" + targetCurrency + "/" + amount;
+        String url = "https://v6.exchangerate-api.com/v6/" + config.getApiKey() + "/pair/" + baseCurrency + "/" + targetCurrency + "/" + amount;
 
         HttpClient client = HttpClient.newBuilder()
                 .build();
