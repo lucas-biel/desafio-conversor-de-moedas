@@ -32,7 +32,7 @@ public class Main {
             int choice = sc.nextInt();
 
             if (choice == 9) {
-                System.out.println("Obrigado por utilizar o conversor!");
+                System.out.println("Obrigado por utilizar o conversor de moedas!");
                 break;
             } else if (choice < 1 || choice > 9) {
                 System.out.println("Digite uma opção válida!");
@@ -42,7 +42,7 @@ public class Main {
             System.out.print("Digite o valor que deseja converter: ");
             float amount = sc.nextFloat();
 
-            if (amount < 0) System.out.println("O valor deve ser maior que zero!");
+            if (amount <= 0) System.out.println("O valor deve ser maior que zero!");
 
             String baseCurrency;
             String targetCurrency;
