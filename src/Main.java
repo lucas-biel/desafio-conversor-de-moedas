@@ -44,8 +44,8 @@ public class Main {
                 float amount = sc.nextFloat();
                 if (amount <= 0) System.out.println("O valor deve ser maior que zero!");
 
-                String baseCurrency;
-                String targetCurrency;
+                String baseCurrency = "";
+                String targetCurrency = "";
 
                 switch (choice) {
                     case 1:
