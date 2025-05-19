@@ -82,6 +82,13 @@ public class Main {
                         break;
                 }
 
+                try {
+                    ConvertedValue converted = request.convertCurrency(baseCurrency, targetCurrency, String.valueOf(amount));
+                    System.out.printf("%f [%s] é igual a %.2f [%s]", amount, baseCurrency, converted.amount(), targetCurrency);
+                } catch (IOException | InterruptedException e) {
+                    System.out.println("Ocorreu um erro ao processar a requisição. Tente novamente.");
+                }
+
             } catch (InputMismatchException e) {
                 System.out.println("Digite apenas números!");
                 sc.next();
