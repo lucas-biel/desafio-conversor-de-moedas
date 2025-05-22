@@ -85,7 +85,7 @@ public class Main {
 
                 try {
                     ConvertedValue converted = request.convertCurrency(baseCurrency, targetCurrency, String.valueOf(amount));
-                    System.out.printf("%f [%s] é igual a %.2f [%s]", amount, baseCurrency, converted.amount(), targetCurrency);
+                    System.out.printf("%.2f [%s] é igual a %.2f [%s]\n\n", amount, baseCurrency, converted.amount(), targetCurrency);
                 } catch (IOException | InterruptedException e) {
                     System.out.println("Ocorreu um erro ao processar a requisição. Tente novamente.");
                 }
